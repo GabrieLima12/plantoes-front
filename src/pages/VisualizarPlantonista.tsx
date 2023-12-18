@@ -1,6 +1,14 @@
+import { useParams } from "react-router-dom";
+import styles from './VisualizarPlantonista.module.css';
+
 const VisualizarPlantonista = () => {
+
+  const { id } = useParams();
+
   return (
-    <div>VisualizarPlantonista</div>
+    <div className={styles.container}>
+      VisualizarPlantonista {id} 
+    </div>
   )
 }
 

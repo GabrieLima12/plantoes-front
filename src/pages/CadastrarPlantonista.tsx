@@ -1,6 +1,10 @@
+import styles from './CadastrarPlantonista.module.css';
+
 const CadastrarPlantonista = () => {
   return (
-    <div>CadastrarPlantonista</div>
+    <div className={styles.container}>
+      CadastrarPlantonista
+    </div>
   )
 }
 

@@ -1,4 +1,14 @@
 .icones {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.icone {
+    color: var(--cor-terciaria);
+    cursor: pointer;
+}
+
+.icone:hover {
+    color: var(--cor-secundaria);
 }

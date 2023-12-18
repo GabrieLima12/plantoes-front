@@ -1,5 +1,3 @@
-import { ActionType } from '../ListagemPlatonistas/Icones';
-
 export interface IMedico {
     id: number,
     nomeMedico: string,
@@ -21,7 +19,7 @@ export interface IActionColumn {
 }
 
 export interface IIconesProps {
-    handleAction: (actionType: ActionType) => void;
+    id: number;
 }
 
 export interface IEnvironment {

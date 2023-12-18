@@ -37,16 +37,12 @@ const Tabela = () => {
     {
       title: "Ações",
       render: (text, record) => (
-        <Icones handleAction={() => handleAction(record.id)} />
+        <Icones id={record.id} />
       )
     }
   ]);
 
   const [dataSource, setDataSource] = useState<IMedico[]>([]);
-
-  const handleAction = (id: number) => {
-    console.log(`Ação clicada para o médico com ID ${id}`);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,7 +51,6 @@ const Tabela = () => {
         const list: IMedico[] = response.data || [];
         setDataSource(list);
       } catch (error) {
-        // Trate os erros, se necessário
         console.error('Erro ao buscar dados:', error);
       }
     };
