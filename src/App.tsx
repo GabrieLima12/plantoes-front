@@ -1,8 +1,10 @@
+import Tabela from "./components/Tabela";
+
 const App = () => {
 
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <Tabela />
     </div>
   )
 }
