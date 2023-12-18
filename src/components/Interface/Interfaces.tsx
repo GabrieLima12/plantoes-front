@@ -1,4 +1,4 @@
-import { ActionType } from './Icones';
+import { ActionType } from '../ListagemPlatonistas/Icones';
 
 export interface IMedico {
     id: number,

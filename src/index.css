@@ -8,6 +8,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  margin: 3em;
+:root {
+  --cor-de-fundo: #FFFFFF;
 }

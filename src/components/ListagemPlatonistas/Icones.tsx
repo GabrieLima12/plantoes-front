@@ -1,6 +1,6 @@
 import { FaPowerOff, FaEdit, FaEye } from "react-icons/fa";
 import styles from './Icones.module.css';
-import { IIconesProps } from "./Interfaces";
+import { IIconesProps } from "../Interface/Interfaces";
 
 export enum ActionType {
     Eye = 'eye',

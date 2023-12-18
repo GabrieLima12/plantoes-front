@@ -1,4 +1,4 @@
-import { IEnvironment } from "../../plantonistas/src/components/Interfaces";
+import { IEnvironment } from "../components/Interface/Interfaces";
 
 export const environment: IEnvironment = {
     production: false,

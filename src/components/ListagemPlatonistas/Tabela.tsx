@@ -1,9 +1,11 @@
-import { Table } from "antd"
-import { useState, useEffect } from "react"
+import { Table } from "antd";
+import { useState, useEffect } from "react";
 import Icones from "./Icones";
-import { IActionColumn, IColumn, IMedico } from "./Interfaces";
-import { environment }from '../../environments/environment'
-import axios from 'axios'
+import { IActionColumn, IColumn, IMedico } from "../Interface/Interfaces";
+import { environment }from '../../environments/environment';
+import axios from 'axios';
+import styles from './Tabela.module.css';
+
 
 const Tabela = () => {
 
@@ -43,7 +45,6 @@ const Tabela = () => {
   const [dataSource, setDataSource] = useState<IMedico[]>([]);
 
   const handleAction = (id: number) => {
-    // Implemente a lógica desejada para a ação
     console.log(`Ação clicada para o médico com ID ${id}`);
   };
 
@@ -63,11 +64,12 @@ const Tabela = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Table 
       columns={columns}
       dataSource={dataSource}
       rowKey='id'
+      scroll={{ x: 900 }}
       />
     </div>
   )
