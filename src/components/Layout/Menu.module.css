@@ -1,14 +1,62 @@
-.container {
-    margin: 2em;
-    background-color: var(--cor-de-fundo);
-}
-
 .links {
-    display: flex;
-    align-items: center;
-    padding: 30em 0;
+    color: black;
+    margin: 10em 2em;
 }
 
 .link {
-    padding: 4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-titulo);
+}
+
+.link:hover {
+    color: var(--cor-secundaria);
+}
+
+.icons {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .icons, .links{
+        width: 80%;
+        margin: 1em .6em;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .icons, .links{
+        width: 80%;
+        margin: 1em .4em;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .icons, .links{
+        width: 80%;
+        margin: 1em .3em;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .icons, .links{
+        width: 80%;
+        margin: 1em .2em;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 }

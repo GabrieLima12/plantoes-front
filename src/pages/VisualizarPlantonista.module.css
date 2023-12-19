@@ -1,4 +1,67 @@
 .container {
     margin: 2em;
+    border-radius: .5em;
     background-color: var(--cor-de-fundo);
+}
+
+.titulo {
+    margin: 1em;
+    border-bottom: 1px solid black;
+}
+
+.inputs{
+    margin: 2em;
+}
+
+.inputs label {
+    display: block;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.input_crm, .input_especialidade, .input_status {
+    width: 20%;
+    font-weight: 500;
+    color: black !important;
+}
+
+.input_nome {
+    width: 40%;
+    font-weight: 500;
+    color: black !important;
+}
+
+.input_status {
+    color: green !important;
+    font-weight: 500;
+}
+
+.input_status_inativo {
+    color: lightcoral !important;
+    font-weight: 500;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 20em;
+}
+
+.botao {
+    background-color: gray;
+    padding: .5em 3em;
+    border-radius: 1em;
+}
+
+.botao_clicado {
+    background-color: green;
+    padding: .5em 3em;
+    border-radius: 1em;
+}
+
+.botao_rodape {
+    display: flex;
+    justify-content: left;
+    padding: 1em;
 }

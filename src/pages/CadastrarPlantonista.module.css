@@ -27,8 +27,29 @@
     width: 40%;
 }
 
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 20em;
+}
+
+.botao {
+    background-color: gray;
+    padding: .5em 3em;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.botao_clicado {
+    background-color: green;
+    padding: .5em 3em;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
 .botao_rodape {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 1em;
 }
