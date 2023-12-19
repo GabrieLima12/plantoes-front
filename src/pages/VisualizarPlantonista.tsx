@@ -13,6 +13,7 @@ const VisualizarPlantonista = () => {
   const [especialidade, setEspecialidade] = useState<string>("");
   const [crm, setCrm] = useState<string>("");
   const [status, setStatus] = useState<string>("");
+  const [nomeUnidade, setNomeUnidade] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,9 +22,10 @@ const VisualizarPlantonista = () => {
       setEspecialidade(response.data.especialidade);
       setCrm(response.data.crm);
       setStatus(response.data.status);
+      setNomeUnidade(response.data.nomeUnidadeAssistencial);
     }
     fetchData();
-  }, [])
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -62,13 +64,13 @@ const VisualizarPlantonista = () => {
             bordered={false} />
         </div>
         <div className={styles.botoes}>
-          <button className={styles.botao_clicado}>
+          <button className={nomeUnidade === "Unidade 1" ? styles.botao_clicado : styles.botao}>
             Unidade 1
           </button>
-          <button className={styles.botao}>
+          <button className={nomeUnidade === "Unidade 2" ? styles.botao_clicado : styles.botao}>
             Unidade 2
           </button>
-          <button className={styles.botao_clicado}>
+          <button className={nomeUnidade === "Unidade 3" ? styles.botao_clicado : styles.botao}>
             Unidade 3
           </button>
         </div>
@@ -76,7 +78,7 @@ const VisualizarPlantonista = () => {
           <Button onClick={() => navigate("/")}>Voltar</Button>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default VisualizarPlantonista;

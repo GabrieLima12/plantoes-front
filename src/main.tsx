@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
     ]
   }
-])
+]);
 
 const root = createRoot(document.getElementById("root")!);
 root.render(<RouterProvider router={router} />);

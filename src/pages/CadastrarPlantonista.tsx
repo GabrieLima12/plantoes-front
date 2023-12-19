@@ -48,10 +48,12 @@ const CadastrarPlantonista = () => {
 
   const handleUnidade2 = () => {
     setUnidade2(!unidade2);
+    setNomeUnidade(unidade2 ? "" : "Unidade 2");
   }
 
   const handleUnidade3 = () => {
     setUnidade3(!unidade3);
+    setNomeUnidade(unidade3 ? "" : "Unidade 3");
   }
 
   const handleChange = (value: string) => {

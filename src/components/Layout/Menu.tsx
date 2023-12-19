@@ -6,7 +6,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 
 interface IMenu {
   collapsed: Boolean,
-}
+};
 
 const Menu: React.FC<IMenu> = ({ collapsed }) => {
 

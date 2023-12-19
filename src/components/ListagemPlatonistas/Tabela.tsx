@@ -38,8 +38,8 @@ const Tabela = () => {
       title: "Ações",
       render: (text, record) => (
         <Icones id={record.id} />
-      )
-    }
+      ),
+    },
   ]);
 
   const [dataSource, setDataSource] = useState<IMedico[]>([]);
@@ -52,7 +52,7 @@ const Tabela = () => {
         setDataSource(list);
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
-      }
+      };
     };
   
     fetchData();
@@ -64,10 +64,9 @@ const Tabela = () => {
       columns={columns}
       dataSource={dataSource}
       rowKey='id'
-      scroll={{ x: 900 }}
-      />
+      scroll={{ x: 900 }} />
     </div>
-  )
-}
+  );
+};
 
 export default Tabela;
