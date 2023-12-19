@@ -2,3 +2,13 @@
     margin: 2em;
     background-color: var(--cor-de-fundo);
 }
+
+.links {
+    display: flex;
+    align-items: center;
+    padding: 30em 0;
+}
+
+.link {
+    padding: 4em 0;
+}

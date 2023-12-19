@@ -1,4 +1,34 @@
 .container {
     margin: 2em;
+    border-radius: .5em;
     background-color: var(--cor-de-fundo);
+}
+
+.titulo {
+    margin: 1em;
+    border-bottom: 1px solid black;
+}
+
+.inputs{
+    margin: 2em;
+}
+
+.inputs label {
+    display: block;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.input_crm, .input_especialidade {
+    width: 20%;
+}
+
+.input_nome {
+    width: 40%;
+}
+
+.botao_rodape {
+    display: flex;
+    justify-content: end;
+    padding: 1em;
 }
