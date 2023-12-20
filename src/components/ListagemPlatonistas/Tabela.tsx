@@ -6,7 +6,6 @@ import { environment }from '../../environments/environment';
 import axios from 'axios';
 import styles from './Tabela.module.css';
 
-
 const Tabela = () => {
 
   const [columns, setColumns] = useState<(IColumn | IActionColumn)[]>([
@@ -36,7 +35,7 @@ const Tabela = () => {
     },
     {
       title: "Ações",
-      render: (text, record) => (
+      render: (_, record) => (
         <Icones id={record.id} />
       ),
     },

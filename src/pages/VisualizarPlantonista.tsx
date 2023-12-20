@@ -29,7 +29,7 @@ const VisualizarPlantonista = () => {
 
   return (
     <div className={styles.container}>
-        <h1 className={styles.titulo}>Cadastro de Médico Plantonista</h1>
+        <h1 className={styles.titulo}>Visualizar Médico Plantonista</h1>
         <div className={styles.inputs}>
           <label><strong>CRM do Médico:</strong></label>
           <Input

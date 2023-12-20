@@ -1,4 +1,4 @@
-import { Button, Input, Select, Space, message } from 'antd';
+import { Button, Input, Select, message } from 'antd';
 import styles from './CadastrarPlantonista.module.css';
 import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
@@ -85,49 +85,49 @@ const CadastrarPlantonista = () => {
 
   return (
     <div className={styles.container}>
-        <h1 className={styles.titulo}>Cadastro de Médico Plantonista</h1>
-        <div className={styles.inputs}>
-          <label><strong>CRM do Médico:</strong></label>
-          <Input
-            type='text'
-            value={crm}
-            onChange={handleCrmChange}
-            maxLength={6}
-            className={styles.input_crm} />
-        </div>
-        <div className={styles.inputs}>
-          <label><strong>Epecialidade do Médico:</strong></label>
-          <Select 
-            options={options}
-            onChange={handleChange}
-            className={styles.input_especialidade}/>
-        </div>
-        <div className={styles.inputs}>
-          <label><strong>Nome do Médico:</strong></label>
-          <Input
-            value={nomeMedico}
-            onChange={(e) => setNomeMedico(e.target.value)} 
-            maxLength={150}
-            type='text'
-            className={styles.input_nome} />
-        </div>
-        <div className={styles.botoes}>
-          <button 
-            className={unidade1 === true ? styles.botao_clicado : styles.botao }
-            onClick={handleUnidade1}>Unidade 1</button>
-          <button 
-            className={unidade2 === true ? styles.botao_clicado : styles.botao }
-            onClick={handleUnidade2}>Unidade 2</button>
-          <button 
-            className={unidade3 === true ? styles.botao_clicado : styles.botao }
-            onClick={handleUnidade3}>Unidade 3</button>
-        </div>
-        <div className={styles.botao_rodape}>
-          <Button onClick={() => navigate("/")}>Voltar</Button>
-          <Button
-            onClick={handleSubmit}
-          >Enviar</Button>
-        </div>
+      <h1 className={styles.titulo}>Cadastro de Médico Plantonista</h1>
+      <div className={styles.inputs}>
+        <label><strong>CRM do Médico:</strong></label>
+        <Input
+          type='text'
+          value={crm}
+          onChange={handleCrmChange}
+          maxLength={6}
+          className={styles.input_crm} />
+      </div>
+      <div className={styles.inputs}>
+        <label><strong>Epecialidade do Médico:</strong></label>
+        <Select 
+          options={options}
+          onChange={handleChange}
+          className={styles.input_especialidade}/>
+      </div>
+      <div className={styles.inputs}>
+        <label><strong>Nome do Médico:</strong></label>
+        <Input
+          value={nomeMedico}
+          onChange={(e) => setNomeMedico(e.target.value)} 
+          maxLength={150}
+          type='text'
+          className={styles.input_nome} />
+      </div>
+      <div className={styles.botoes}>
+        <button 
+          className={unidade1 === true ? styles.botao_clicado : styles.botao }
+          onClick={handleUnidade1}>Unidade 1</button>
+        <button 
+          className={unidade2 === true ? styles.botao_clicado : styles.botao }
+          onClick={handleUnidade2}>Unidade 2</button>
+        <button 
+          className={unidade3 === true ? styles.botao_clicado : styles.botao }
+          onClick={handleUnidade3}>Unidade 3</button>
+      </div>
+      <div className={styles.botao_rodape}>
+        <Button onClick={() => navigate("/")}>Voltar</Button>
+        <Button
+          onClick={handleSubmit}
+        >Enviar</Button>
+      </div>
     </div>
   );
 };

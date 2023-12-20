@@ -1,13 +1,26 @@
 import { ConfigProvider, Layout } from "antd";
 import Menu from "../components/Layout/Menu";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 
 const { Sider, Header, Footer} = Layout;
 
 const Home = () => {
 
   const [collapsed, setCollapsed] = useState(false);
+  const [larguraDaTela, setLarguraDaTela] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setLarguraDaTela(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); 
+
 
   return (
     <div className="container">
@@ -23,7 +36,10 @@ const Home = () => {
         }
       }}>
       <Layout style={{ minHeight: '100vh', }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+        <Sider
+          breakpoint="xl"
+          trigger={larguraDaTela <= 400 ? null : (collapsed === true ? <RightOutlined /> : <LeftOutlined />)}
+          collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
           <Menu collapsed={collapsed}/>
         </Sider>
         <Layout style={{ minHeight: '100vh' }}>

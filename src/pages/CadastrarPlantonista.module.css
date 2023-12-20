@@ -30,8 +30,9 @@
 .botoes {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
-    margin: 2em 20em;
+    margin: 2em;
 }
 
 .botao {
@@ -52,4 +53,36 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .input_crm, .input_especialidade, .input_status {
+        width: 40%;
+    }
+    
+    .input_nome {
+        width: 70%;
+    }
+
+    .botoes, .botao, .botao_clicado {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .input_crm, .input_especialidade, .input_status {
+        width: 100%;
+    }
+    
+    .input_nome {
+        width: 100%;
+    }
+
+    .botoes, .botao, .botao_clicado {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
 }
