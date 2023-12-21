@@ -1,5 +1,5 @@
 import { Button, Input, Select, message } from 'antd';
-import styles from './CadastrarPlantonista.module.css';
+import styles from './LayoutComum.module.css';
 import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
 import { environment } from '../environments/environment';
@@ -113,14 +113,20 @@ const CadastrarPlantonista = () => {
       </div>
       <div className={styles.botoes}>
         <button 
+          style={{ cursor: "pointer" }}
           className={unidade1 === true ? styles.botao_clicado : styles.botao }
-          onClick={handleUnidade1}>Unidade 1</button>
+          onClick={handleUnidade1}>Unidade 1
+          </button>
         <button 
+          style={{ cursor: "pointer" }}
           className={unidade2 === true ? styles.botao_clicado : styles.botao }
-          onClick={handleUnidade2}>Unidade 2</button>
+          onClick={handleUnidade2}>Unidade 2
+          </button>
         <button 
+          style={{ cursor: "pointer" }}
           className={unidade3 === true ? styles.botao_clicado : styles.botao }
-          onClick={handleUnidade3}>Unidade 3</button>
+          onClick={handleUnidade3}>Unidade 3
+          </button>
       </div>
       <div className={styles.botao_rodape}>
         <Button onClick={() => navigate("/")}>Voltar</Button>

@@ -19,12 +19,26 @@
     width: 100%;
 }
 
-.input_crm, .input_especialidade {
+.input_crm, .input_especialidade, .input_status {
     width: 20%;
+    font-weight: 500;
+    color: black !important;
 }
 
 .input_nome {
-    width: 40%;
+    width: 50%;
+    font-weight: 500;
+    color: black !important;
+}
+
+.input_status {
+    color: green !important;
+    font-weight: 500;
+}
+
+.input_status_inativo {
+    color: lightcoral !important;
+    font-weight: 500;
 }
 
 .botoes {
@@ -39,14 +53,12 @@
     background-color: gray;
     padding: .5em 3em;
     border-radius: 1em;
-    cursor: pointer;
 }
 
 .botao_clicado {
     background-color: green;
     padding: .5em 3em;
     border-radius: 1em;
-    cursor: pointer;
 }
 
 .botao_rodape {
@@ -63,6 +75,22 @@
     
     .input_nome {
         width: 70%;
+    }
+
+    .botoes, .botao, .botao_clicado {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .input_crm, .input_especialidade, .input_status {
+        width: 60%;
+    }
+    
+    .input_nome {
+        width: 100%;
     }
 
     .botoes, .botao, .botao_clicado {

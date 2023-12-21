@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import styles from './VisualizarPlantonista.module.css';
+import styles from './LayoutComum.module.css';
 import { Button, Input } from "antd";
 import { useEffect, useState } from "react";
 import axios from "axios";
