@@ -17,7 +17,7 @@ const EditarPlantonista = () => {
   const [unidade1, setUnidade1] = useState(false);
   const [unidade2, setUnidade2] = useState(false);
   const [unidade3, setUnidade3] = useState(false);
-  const [nomeUnidade, setNomeUnidade] = useState("");
+  const [nomeUnidade, setNomeUnidade] = useState<string>();
 
   const handleUnidade1 = () => {
     setUnidade1(!unidade1);
@@ -85,17 +85,17 @@ const EditarPlantonista = () => {
         <div className={styles.botoes}>
           <button 
             style={{ cursor: "pointer" }}
-            className={unidade1 === true ? styles.botao_clicado : styles.botao }
+            className={nomeUnidade == "Unidade 1" ? styles.botao_clicado : styles.botao }
             onClick={handleUnidade1}>Unidade 1
             </button>
           <button 
             style={{ cursor: "pointer" }}
-            className={unidade2 === true ? styles.botao_clicado : styles.botao }
+            className={nomeUnidade === "Unidade 2" ? styles.botao_clicado : styles.botao }
             onClick={handleUnidade2}>Unidade 2
             </button>
           <button 
             style={{ cursor: "pointer" }}
-            className={unidade3 === true ? styles.botao_clicado : styles.botao }
+            className={nomeUnidade === "Unidade 3" ? styles.botao_clicado : styles.botao }
             onClick={handleUnidade3}>Unidade 3
             </button>
         </div>
