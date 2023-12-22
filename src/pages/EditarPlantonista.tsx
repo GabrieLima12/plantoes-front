@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Button, Input } from "antd";
+import { Button, Input, message } from "antd";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { environment } from "../environments/environment";
@@ -14,23 +14,23 @@ const EditarPlantonista = () => {
   const [especialidade, setEspecialidade] = useState<string>("");
   const [crm, setCrm] = useState<string>("");
   const [status, setStatus] = useState<string>("");
-  const [unidade1, setUnidade1] = useState(false);
-  const [unidade2, setUnidade2] = useState(false);
-  const [unidade3, setUnidade3] = useState(false);
+  const [unidade1, setUnidade1] = useState(Boolean);
+  const [unidade2, setUnidade2] = useState(Boolean);
+  const [unidade3, setUnidade3] = useState(Boolean);
   const [nomeUnidade, setNomeUnidade] = useState<string>();
 
   const handleUnidade1 = () => {
-    setUnidade1(!unidade1);
+    setUnidade1(unidade1 ? false : true);
     setNomeUnidade(unidade1 ? "" : "Unidade 1");
   }
 
   const handleUnidade2 = () => {
-    setUnidade2(!unidade2);
+    setUnidade2(unidade2 ? false : true);
     setNomeUnidade(unidade2 ? "" : "Unidade 2");
   }
 
   const handleUnidade3 = () => {
-    setUnidade3(!unidade3);
+    setUnidade3(unidade3 ? false : true);
     setNomeUnidade(unidade3 ? "" : "Unidade 3");
   }
 
@@ -45,6 +45,23 @@ const EditarPlantonista = () => {
     }
     fetchData();
   }, []);
+
+  const handlerSubmit = async () => {
+    
+    const payload = {
+      id: id,
+      nomeUnidadeAssistencial: nomeUnidade,
+    }
+
+    try {
+      await axios.put(environment.apiUrl + "/unidade", payload);
+      message.success("Unidade alterada com sucesso!");
+      navigate("/");
+    } catch (error) {
+      message.error("Erro na requisição!");
+    }
+
+  }
 
   return (
     <div className={styles.container}>
@@ -101,6 +118,9 @@ const EditarPlantonista = () => {
         </div>
         <div className={styles.botao_rodape}>
           <Button onClick={() => navigate("/")}>Voltar</Button>
+          <Button
+            onClick={handlerSubmit}
+            >Salvar</Button>
         </div>
     </div>
   );

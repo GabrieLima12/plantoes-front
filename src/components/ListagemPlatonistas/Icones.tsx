@@ -29,6 +29,7 @@ const Icones: React.FC<IIconesProps> = ({ id }) => {
     try {
       await axios.put(environment.apiUrl + "/status", payload);
       message.success(`Médico ${status === "ATIVO" ? "inativado" : "ativado"} com sucesso`);
+      window.location.reload();
     } catch (error) {
       message.error("Erro na requisição!");
     };

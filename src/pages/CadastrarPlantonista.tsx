@@ -132,7 +132,7 @@ const CadastrarPlantonista = () => {
         <Button onClick={() => navigate("/")}>Voltar</Button>
         <Button
           onClick={handleSubmit}
-        >Enviar</Button>
+        >Salvar</Button>
       </div>
     </div>
   );
